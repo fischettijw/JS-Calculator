@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Calculator by J. Fischetti</title>
+    <link href="css-grid.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js-calculator.js"></script>
+</head>
+
+<body onload="initialize()">
+    <h1>Keyboard Calculator</h1>
+
+    <div class="calculator">
+
+        <input class="is-memory" id="memory" readonly>
+        <input class="is-displayOperator" id="displayOperator" readonly>
+        <input class="is-displayNum" id="displayNum" readonly>
+
+        <button class="calc-button is-all-clear" onclick="clearAllCalculator()">AC</button>
+        <button class="calc-button is-clear" onclick="clearCalculator()">C</button>
+        <button class="calc-button bs" onclick="backspace()">&#8676</button>
+        <!-- https://www.w3schools.com/charsets/ref_utf_symbols.asp -->
+        <!-- https://www.w3schools.com/charsets/ref_utf_arrows.asp -->
+        <!-- https://www.w3schools.com/charsets/ref_html_utf8.asp -->
+        <button class="calc-button is-operator" onclick="operatorClicked('/')">/</button>
+
+        <button class="calc-button" onclick="digitClicked('7')">7</button>
+        <button class="calc-button" onclick="digitClicked('8')">8</button>
+        <button class="calc-button" onclick="digitClicked('9')">9</button>
+        <button class="calc-button is-operator" onclick="operatorClicked('X')">X</button>
+
+        <button class="calc-button" onclick="digitClicked('4')">4</button>
+        <button class="calc-button" onclick="digitClicked('5')">5</button>
+        <button class="calc-button" onclick="digitClicked('6')">6</button>
+        <button class="calc-button is-operator" onclick="operatorClicked('-')">-</button>
+
+        <button class="calc-button" onclick="digitClicked('1')">1</button>
+        <button class="calc-button" onclick="digitClicked('2')">2</button>
+        <button class="calc-button" onclick="digitClicked('3')">3</button>
+        <button class="calc-button is-operator" onclick="operatorClicked('+')">+</button>
+
+        <button class="calc-button is-zero" onclick="digitClicked('0')">0</button>
+        <button class="calc-button is-decimal" onclick="decimalClicked()">.</button>
+        <button class="calc-button is-equals" onclick="performEqual()">=</button>
+
+    </div>
+
+    <h2>desiged and programmed by Joseph Fischetti</h2>
+
+</body>
+
+</html>

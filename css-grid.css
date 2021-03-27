@@ -1,0 +1,108 @@
+            /* Variables or Custom Properties */
+            
+            body {
+                /* The following are Variables/Custom Properties */
+                --memoryBkGdColor: lightgray;
+                --memoryTextColor: black;
+                --displayOperatorBkGdColor: lightgray;
+                --displayOperatorTextColor: black;
+                --numberButtonBkGdColors: darkgray;
+                --numberButtonTextColor: white;
+                --nonNumberButtonBkGdColor: rgb(255, 102, 0);
+                --nonNumberButtonTextColor: white;
+                --externalBorderBkGdColor: rgb(255, 102, 0);
+                --interBorderBkGdColor: black;
+                /*  The following two colors are controlled in Javascript Code */
+                /* --displayBkgdColor: #F6F6F6;
+                --displayTextColor: black; */
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                text-align: center;
+                padding-bottom: 5px;
+            }
+            
+            .calculator {
+                max-width: 500px;
+                height: 625px;
+                margin: 0 auto;
+                border: 6px solid var( --externalBorderBkGdColor);
+                border-radius: 20px 20px 0px 0px;
+                padding: 20px;
+                background-color: var(--interBorderBkGdColor);
+                display: grid;
+                grid-template-rows: 1fr, repeat(6, 2fr);
+                grid-template-columns: repeat( 4, minmax(50px, 1fr));
+                grid-gap: 15px;
+            }
+            
+            #memory {
+                text-align: right;
+                font-size: 30px;
+                color: var(--memoryTextColor);
+                background-color: var(--memoryBkGdColor);
+                grid-column: span 3;
+            }
+            
+            #displayOperator {
+                text-align: center;
+                font-size: 30px;
+                color: var(--displayOperatorTextColor);
+                background-color: var(--displayOperatorBkGdColor);
+                grid-column: span 1;
+            }
+            
+            #displayNum {
+                text-align: right;
+                font-size: 60px;
+                /*  The following two colors are controlled in Javascript Code 
+                color: var(--displayTextColor);
+                background-color: var(--displayBkgdColor); */
+                grid-column: span 4;
+            }
+            
+            .calc-button {
+                background: darkgray;
+                border: 1px solid #111;
+                padding: 10px;
+                color: var(--numberButtonTextColor);
+                font-weight: bold;
+                border-radius: 5px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            
+            .is-all-clear {
+                grid-column: span 1;
+                background: var( --nonNumberButtonBkGdColor);
+            }
+            
+            .is-clear {
+                grid-column: span 1;
+                background: var( --nonNumberButtonBkGdColor);
+            }
+            
+            .bs {
+                grid-column: span 1;
+                background: var( --nonNumberButtonBkGdColor);
+            }
+            
+            .is-zero {
+                grid-column: span 2;
+                background: var( --nonNumberButtonBkGdColor);
+            }
+            
+            .is-decimal {
+                grid-column: span 1;
+                background: var( --nonNumberButtonBkGdColor);
+            }
+            
+            .is-operator,
+            .is-equals {
+                grid-column: span 1;
+                background: var( --nonNumberButtonBkGdColor);
+            }
